@@ -1,0 +1,60 @@
+header {
+  position: relative;
+  height: 15%;
+  background-color: var(--header-bg-color);
+}
+
+header h1 {
+  position: absolute;
+  bottom: 10%;
+  left: 1%;
+  font-size: 44px;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: var(--header-text-color);
+}
+
+.notification {
+  display: inline-block;
+  position: fixed;
+  z-index: 1000;
+  right: 10px;
+  top: 100px;
+  border: 1px solid white;
+  padding: 20px 100px;
+  border-radius: 20px;
+  background-color: white;
+  color: #77bbd4;
+}
+
+.change-theme {
+
+  color: rgba(0,0,0,.5);
+}
+
+.mat-slide-toggle-bar {
+  background-color: #3f51b5;
+}
+
+.notification p {
+  margin: 0;
+}
+
+nav > a {
+  text-transform: uppercase;
+}
+
+nav {
+  padding-left: 1%;
+}
+
+@media only screen and (max-width: 678px) {
+  header {
+    height: 200px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+}

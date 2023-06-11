@@ -1,0 +1,169 @@
+#product-details {
+  text-align: center;
+  margin: 0 auto 300px;
+  padding-bottom: 100px;
+  width: 50%;
+}
+
+.details-image {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  max-height: 350px;
+  max-width: 30%;
+  display: block;
+  transition: transform .3s;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.data {
+  margin-left: 10px;
+}
+
+.justify {
+  text-align: justify;
+  margin: 0 auto 20px;
+}
+
+#place-bid {
+  text-align: left;
+}
+
+#place-bid-input-container {
+  position: relative;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+}
+
+.details-image:hover {
+  border-radius: 8px;
+  transform: scale(1.5);
+}
+
+#bid-label {
+  font-size: 22px;
+}
+
+#place-bid-btn-container {
+  margin-top: 10px;
+}
+
+#delete-btn {
+  margin-right: 20px;
+}
+
+#edit-btn {
+  margin-left: 20px;
+}
+
+#no-bids {
+  color: gray;
+}
+
+.comments, .post-comment {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+#post-comment-area {
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.bid {
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+.bid:last-child {
+  border: none;
+}
+
+#all-bids {
+  margin-bottom: 100px;
+}
+
+#bid-show-more {
+  margin-top: 40px;
+  float: right;
+}
+
+.comment {
+  margin-top: 20px;
+}
+
+.comment.bottom-border {
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.comment.bottom-border:last-child {
+  border: 0;
+}
+
+#like-counter {
+  display: flex;
+  align-items: baseline;
+}
+
+#like-counter p {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#like-counter button {
+  margin-left: 30px;
+}
+
+.like-already-liked {
+  margin-left: 30px;
+}
+
+.back {
+  display: block;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .justify {
+    width: 90% !important;
+  }
+
+  .details-image {
+    max-width: 100% !important;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .details-image:hover {
+    transform: scale(1);
+  }
+
+  #product-details {
+    width: 90% !important;
+  }
+
+  span {
+    display: block;
+    left: 30% !important;
+  }
+
+  span.data {
+    margin-left: 0;
+  }
+}
+
+

@@ -1,0 +1,17 @@
+*, .container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+
+footer, nav {
+  z-index: 999;
+}
+
+input.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+textarea.ng-invalid.ng-touched {
+  border-color: red;
+}

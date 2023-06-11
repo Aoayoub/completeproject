@@ -1,0 +1,40 @@
+<div id="create-product">
+  <h2>Add product for sell</h2>
+  <p *ngIf="showServerErrorMessage">{{errorMessage}}</p>
+  <div *ngIf="!showServerErrorMessage">
+    <p *ngIf="title.invalid">Title must be at least 5 chars</p>
+    <p *ngIf="description.invalid">Description must be at least 50 chars</p>
+    <p *ngIf="startPrice.invalid && startPrice.touched">Start price must be a number</p>
+    <p *ngIf="file.invalid">Product image is required</p>
+  </div>
+  <input type="text" name="title" class="form-control my-form" placeholder="Title" [formControl]="title"/>
+  <textarea name="description" class="form-control my-form" placeholder="Description (Users will see only first 25 symbols at home page)" style="height: 150px"
+            [formControl]="description"></textarea>
+  <div style="margin: 20px;"></div>
+  <input type="number" name="startPrice" class="form-control my-form" placeholder="Start price"
+         [formControl]="startPrice"/>
+
+
+  <input [matDatepicker]="picker" (focus)="picker.open()" class="form-control my-form"
+         placeholder="Chose end date" [formControl]="endDate" >
+  <mat-datepicker #picker></mat-datepicker>
+
+  <div style="margin: 20px;"></div>
+  <div class="custom-file my-form">
+    <input type="file" class="custom-file-input" id="customFile" [formControl]="file"
+           (change)="fileChangeEvent($event)">
+    <label class="custom-file-label" for="customFile" style="text-align: left;color: gray">Upload
+      image</label>
+  </div>
+
+  <image-cropper
+    [imageChangedEvent]="imageChangedEvent"
+    format="png"
+    (imageCropped)="imageCropped($event)"
+    cropperStaticHeight="100"
+  ></image-cropper>
+
+  <button type="button" class="btn btn-primary" id="create-button" (click)="create()"
+          [disabled]="title.invalid || description.invalid || startPrice?.errors?.number || file.invalid">Add product
+  </button>
+</div>

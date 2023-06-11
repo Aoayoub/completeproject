@@ -1,0 +1,24 @@
+@media only screen and (max-width: 600px) {
+  #header h1 {
+    max-width: 500px;
+  }
+
+  span {
+    display: block;
+    left: 30% !important;
+  }
+
+  .notification{
+    padding: 20px 50px;
+  }
+}
+
+.scroll-to-top {
+  position: fixed;
+  right: 100px;
+  bottom: 120px;
+  background-color: #0C6980;
+  padding: 15px 30px;
+  border-radius: 8px;
+  color: white;
+}

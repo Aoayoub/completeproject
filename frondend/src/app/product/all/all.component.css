@@ -1,0 +1,65 @@
+:host img {
+  max-height: 400px;
+}
+
+:host div{
+  text-align: center;
+
+}
+
+div#all {
+  padding-bottom: 100px;
+}
+
+:host .card-body {
+  text-align: left;
+}
+
+:host h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+mat-paginator {
+  padding-bottom: 50px;
+}
+
+.flex {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.flex p, a{
+  margin-right: 10px;
+}
+
+.flex a {
+  color: #007bff;
+}
+
+.flex a.active-sort {
+  color: #cccccc;
+}
+
+
+.flex a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  mat-paginator {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+
+  .flex {
+    justify-content: center;
+    align-items: unset;
+    flex-wrap: wrap;
+  }
+}

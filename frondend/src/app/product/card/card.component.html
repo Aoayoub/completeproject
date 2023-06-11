@@ -1,0 +1,9 @@
+<div class="card" style="width: 400px;">
+  <div class="card-body">
+    <h4 class="card-title" [title]="product.title">{{product.title | shorten:20}}</h4>
+    
+    <div id="like-counter">
+    </div>
+    <a [routerLink]="['/product', product._id]" class="btn btn-primary">Details</a>
+  </div>
+</div>
